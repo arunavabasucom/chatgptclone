@@ -1,11 +1,11 @@
-import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { SessionProvider } from "@/components/SessionProvider";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../pages/api/auth/[...nextauth]";
 import Login from "@/components/Login";
+import { Inter } from "next/font/google";
+import Sidebar from "@/components/Sidebar";
+import { getServerSession } from "next-auth";
+import { SessionProvider } from "@/components/SessionProvider";
+import { authOptions } from "../../pages/api/auth/[...nextauth]";
 
 const inter = Inter({ subsets: ["latin"] });
 

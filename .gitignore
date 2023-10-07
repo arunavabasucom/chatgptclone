@@ -36,3 +36,4 @@ next-env.d.ts
 
 
 firebase.ts
+serviceAccountKey.json

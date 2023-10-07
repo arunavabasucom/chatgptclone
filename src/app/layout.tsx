@@ -6,6 +6,7 @@ import Sidebar from "@/components/Sidebar";
 import { getServerSession } from "next-auth";
 import { SessionProvider } from "@/components/SessionProvider";
 import { authOptions } from "../../pages/api/auth/[...nextauth]";
+import ClientProvider from "@/components/ClientProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,9 +34,10 @@ export default async function RootLayout({
                 <Sidebar />
               </div>
 
-              {/*ClientProvider - Notification*/}
+                {/*ClientProvider - Notification*/}
+                <ClientProvider/>
 
-              <div className="bg-[#343541] flex-1">{children}</div>
+              <div className="bg-[#343541] flex-1">{children}C</div>
             </div>
           )}
         </SessionProvider>

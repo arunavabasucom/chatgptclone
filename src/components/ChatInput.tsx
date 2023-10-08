@@ -88,6 +88,7 @@ function ChatInput({ chatId }: ChatInputProps) {
           disabled={!prompt || !session}
           type="submit"
         >
+          {``}
           <PaperAirplaneIcon className="h-4 w-4 -rotate-45" />
         </button>
       </form>

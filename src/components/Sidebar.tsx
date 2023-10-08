@@ -14,7 +14,7 @@ export default function Sidebar() {
     session &&
       query(
         collection(db, "users", session?.user?.email!, "chats"),
-        orderBy("createdAt", "asc")
+        orderBy("createdAt", "desc")
       )
   );
 

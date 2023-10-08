@@ -8,7 +8,7 @@ type Data = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse<Data>
 ) {
   const { prompt, chatId, model, session } = req.body;
   if (!prompt) {
@@ -20,18 +20,15 @@ export default async function handler(
   if (!chatId) {
     res.status(400).json({ answer: "Please provide a valid chat ID!" });
   }
-  const response = await query(prompt, chatId, model);
+  const response: any = await query(prompt, chatId, model);
 
-  
-
-  // ChatGPT Query
   const message: Message = {
-    text: response || "ChatGPT was unable to find the answer for that!",
+    text: response.content || "ChatGPT was unable to find the answer for that!",
     createdAt: admin.firestore.Timestamp.now(),
     user: {
       _id: "chatGPT",
       name: "chatGPT",
-      avatar: `https://ui-avatars.com/api/?name=chatGPT`,
+      avatar: `/ChatGPT-Logo.png`,
     },
   };
   await admindb

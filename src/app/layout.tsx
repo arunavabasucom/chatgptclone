@@ -23,6 +23,7 @@ export default async function RootLayout({
   const session = await getServerSession(authOptions);
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className}>
         <SessionProvider session={session}>
           {!session ? (
@@ -34,8 +35,8 @@ export default async function RootLayout({
                 <Sidebar />
               </div>
 
-                {/*ClientProvider - Notification*/}
-                <ClientProvider/>
+              {/*ClientProvider - Notification*/}
+              <ClientProvider />
 
               <div className="bg-[#343541] flex-1">{children}C</div>
             </div>

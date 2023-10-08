@@ -1,4 +1,4 @@
-ChatGPT Clone
+# ChatGPT Clone
 
 ## Getting Started
 

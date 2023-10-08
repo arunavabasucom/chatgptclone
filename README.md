@@ -23,7 +23,7 @@ a. Run the command -
 ```bash 
 cp .env.sample .env
 ```
-b.Setup the environment variables - 
+b. Setup the environment variables - 
 ```
 OPENAI_API_KEY = "your_openai_api_key"
 

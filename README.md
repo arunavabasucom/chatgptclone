@@ -1,5 +1,5 @@
 # ChatGPT Clone 
-<img src="./public/assets/app.png" alt="chatGPT Clone" style="border-radius: 10px;" />
+<img src="./public/assets/app.png" alt="chatGPT Clone" style="border-radius: 16px;" />
 
 
 ChatGPT Clone is an AI-powered chat application that allows users to have natural and engaging conversations with an AI chatbot. This application is built upon the `GPT-3.5` language model and other openai models , which is capable of understanding and generating human-like text responses.

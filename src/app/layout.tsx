@@ -23,7 +23,7 @@ export default async function RootLayout({
   const session = await getServerSession(authOptions);
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/assets/favicon.ico" sizes="any" />
       <body className={inter.className}>
         <SessionProvider session={session}>
           {!session ? (

@@ -45,7 +45,7 @@ NEXTAUTH_SECRET = "your_nextauth_secret"
 
 ```
 
-1. **Run the Application**: Start the ChatGPT Clone application:
+1. **Run the Application**: 
 
 ```bash
 yarn dev

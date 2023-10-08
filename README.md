@@ -1,21 +1,24 @@
 # ChatGPT Clone 
+<img src="./public/assets/app.png" alt="chatGPT Clone" style="border-radius: 10px;" />
+
+
 ChatGPT Clone is an AI-powered chat application that allows users to have natural and engaging conversations with an AI chatbot. This application is built upon the `GPT-3.5` language model and other openai models , which is capable of understanding and generating human-like text responses.
 
 ## Getting Started 
 
-1. **Clone the Repository**: Clone the ChatGPT Clone repository to your local machine using the following command:
-
+1. **Clone the Repository**: 
 ```bash 
 git clone https://github.com/arunavabasu-03/chatgptclone.git
 ```
 
-2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies using your preferred package manager. For example, with `yarn` :
+1. **Install Dependencies**: 
 
 ```bash 
 cd chatgptclone  && yarn install
 ```
 
-3. **Configure Environment Variables**: Create a .env file in the project root and configure the environment variables:
+1. **Configure Environment Variables**: 
+   
 a. Run the command -  
 ```bash 
 cp .env.sample .env
@@ -42,7 +45,7 @@ NEXTAUTH_SECRET = "your_nextauth_secret"
 
 ```
 
-4. **Run the Application**: Start the ChatGPT Clone application:
+1. **Run the Application**: Start the ChatGPT Clone application:
 
 ```bash
 yarn dev

@@ -6,6 +6,8 @@ import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
 import { db } from "../../firebase";
 import toast from "react-hot-toast";
+import ModelSelection from "./ModelSelection";
+import useSWR from "swr";
 
 type ChatInputProps = {
   chatId: string;
@@ -14,9 +16,9 @@ type ChatInputProps = {
 function ChatInput({ chatId }: ChatInputProps) {
   const [prompt, setPrompt] = useState("");
   const { data: session } = useSession();
-
-  //getting the model
-  const model = "gpt-3.5-turbo";
+  const { data: model } = useSWR("model", {
+    fallbackData: "gpt-3.5-turbo",
+  });
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,7 +37,7 @@ function ChatInput({ chatId }: ChatInputProps) {
           `https://ui-avatars.com/api/?name=${session?.user?.name}`,
       },
     };
-  const docRef =   await addDoc(
+    const docRef = await addDoc(
       collection(
         db,
         "users",
@@ -45,9 +47,8 @@ function ChatInput({ chatId }: ChatInputProps) {
         "messages"
       ),
       message
-    )
+    );
 
-    
     //Toast Notification is loading...
     const notification = toast.loading("ChatGPT is thinking ...");
 
@@ -91,7 +92,9 @@ function ChatInput({ chatId }: ChatInputProps) {
         </button>
       </form>
 
-      <div>{/*model selection */}</div>
+      <div className="md:hidden">
+        <ModelSelection />
+      </div>
     </div>
   );
 }

@@ -32,7 +32,6 @@ export default async function handler(
       avatar: `https://ui-avatars.com/api/?name=chatGPT`,
     },
   };
-  console.log(message);
   await admindb
     .collection("users")
     .doc(session?.user?.email)

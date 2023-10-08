@@ -8,11 +8,10 @@ type ChatPageProps = {
 };
 
 function ChatPage({ params: { id } }: ChatPageProps) {
+
   return (
     <div className="flex flex-col h-screen overflow-hidden">
-      {/* Chat */}
       <Chat chatId={id} />
-      {/* ChatInput  */}
       <ChatInput chatId={id} />
     </div>
   );

@@ -28,7 +28,7 @@ export default async function handler(
     user: {
       _id: "chatGPT",
       name: "chatGPT",
-      avatar: `/ChatGPT-Logo.png`,
+      avatar: `/assets/ChatGPT-Logo.png`,
     },
   };
   await admindb

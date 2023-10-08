@@ -1,6 +1,7 @@
 # ChatGPT Clone 
+it is a chatGPT clone . 
 
-## Getting Started
+## Getting Started 
 
 Run the development server:
 
